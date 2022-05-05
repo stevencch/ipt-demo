@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +12,11 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Ipt.Web.Core\Demo.Ipt.Web.Core.csproj" />
+    <ProjectReference Include="..\Demo.Ipt.Web.Infrastructure\Demo.Ipt.Web.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,3 @@
-﻿namespace Demo.Ipt.Web
-{
-    public class GlobalUsing
-    {
-    }
-}
+﻿global using Microsoft.AspNetCore.Builder;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
