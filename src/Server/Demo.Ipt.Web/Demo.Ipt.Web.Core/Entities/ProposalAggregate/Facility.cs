@@ -1,5 +1,5 @@
 ﻿namespace Demo.Ipt.Web.Core.Entities.ProposalAggregate;
-public class Facility: BaseEntity //ValueObject
+public class Facility: BaseEntity
 {
     public string FacilityName { get; set; }
     public Country BookingCountry { get; set; }

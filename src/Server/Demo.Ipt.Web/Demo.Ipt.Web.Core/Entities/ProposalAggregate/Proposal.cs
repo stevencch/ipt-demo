@@ -1,6 +1,6 @@
 ﻿namespace Demo.Ipt.Web.Core.Entities.ProposalAggregate;
 
-public class Proposal : BaseEntity, IAggregateRoot //ValueObject
+public class Proposal : BaseEntity, IAggregateRoot
 {
     public Proposal()
     {
@@ -21,7 +21,9 @@ public class Proposal : BaseEntity, IAggregateRoot //ValueObject
             BookingCountry = bookingCountry,
             StartDate = startDate,
             MaturityDate = maturityDate,
-            Limit = limit
+            Limit = limit,
+            DateCreated=DateTime.Now,
+            DateModified=DateTime.Now,
         });
     }
 }
