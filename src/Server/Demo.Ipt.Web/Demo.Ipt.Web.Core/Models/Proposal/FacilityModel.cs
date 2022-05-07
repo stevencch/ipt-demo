@@ -8,5 +8,4 @@ public class FacilityModel
     public DateTime StartDate { get; set; }
     public DateTime MaturityDate { get; set; }
     public decimal Limit { get; set; }
-    public ProposalModel Proposal { get; set; }
 }
