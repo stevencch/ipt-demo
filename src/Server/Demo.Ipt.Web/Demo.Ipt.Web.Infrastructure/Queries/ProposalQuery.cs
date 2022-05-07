@@ -1,6 +1,4 @@
-﻿using Demo.Ipt.Web.Infrastructure.Data;
-
-namespace Demo.Ipt.Web.Infrastructure.Queries;
+﻿namespace Demo.Ipt.Web.Infrastructure.Queries;
 public class ProposalQuery : IProposalQuery
 {
     private readonly IptDbContext _dbContext;

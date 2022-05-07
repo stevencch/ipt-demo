@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace Demo.Ipt.Web.Infrastructure.Data;
+﻿namespace Demo.Ipt.Web.Infrastructure.Data;
 public class IptDbContext : DbContext
 {
     public IptDbContext(DbContextOptions<IptDbContext> options) : base(options)

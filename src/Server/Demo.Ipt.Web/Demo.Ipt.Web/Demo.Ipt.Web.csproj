@@ -24,5 +24,9 @@
     <ProjectReference Include="..\Demo.Ipt.Web.Core\Demo.Ipt.Web.Core.csproj" />
     <ProjectReference Include="..\Demo.Ipt.Web.Infrastructure\Demo.Ipt.Web.Infrastructure.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+     <InternalsVisibleTo Include="Demo.Ipt.IntegrationTest" />
+</ItemGroup>
 
 </Project>

@@ -1,6 +1,4 @@
-﻿using Demo.Ipt.Web.Core.Entities.ProposalAggregate;
-
-namespace Demo.Ipt.Test.Common
+﻿namespace Demo.Ipt.Test.Common
 {
     public static class DataFactory
     {
@@ -35,6 +33,13 @@ namespace Demo.Ipt.Test.Common
                             Limit=1000000000,
                             DateCreated = Constants.DefaultDateTimeForTesting,
                             DateModified = Constants.DefaultDateTimeForTesting,
+                            BookingCountry=new Country
+                            {
+                                Currency="AUD",
+                                Name="Australia",
+                                DateCreated = Constants.DefaultDateTimeForTesting,
+                                DateModified = Constants.DefaultDateTimeForTesting,
+                            }
                         },
                         new Facility
                         {
@@ -45,6 +50,13 @@ namespace Demo.Ipt.Test.Common
                             Limit=1000000000,
                             DateCreated = Constants.DefaultDateTimeForTesting,
                             DateModified = Constants.DefaultDateTimeForTesting,
+                            BookingCountry=new Country
+                            {
+                                Currency="AUD",
+                                Name="Australia",
+                                DateCreated = Constants.DefaultDateTimeForTesting,
+                                DateModified = Constants.DefaultDateTimeForTesting,
+                            }
                         }
                     }
                 },
