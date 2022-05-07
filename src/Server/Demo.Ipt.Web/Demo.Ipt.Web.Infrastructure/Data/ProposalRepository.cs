@@ -5,8 +5,8 @@ public class ProposalRepository : EfRepository<Proposal>, IProposalRepository
     {
     }
 
-    public Task<IEnumerable<Proposal>> GetProposalsAsync()
+    public async Task<IEnumerable<Proposal>> GetProposalsAsync(CancellationToken ct = default)
     {
-        throw new NotImplementedException();
+        return await ListAsync(new ProposalWithFacilitiesSpecification(),ct);
     }
 }
