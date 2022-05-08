@@ -22,8 +22,16 @@ public class ProposalService : IProposalService
     /// <returns></returns>
     public async Task<IEnumerable<ProposalModel>> GetProposalsAsync(CancellationToken ct = default)
     {
-        var proposals = await _proposalRepository.GetProposalsAsync(ct);
-        return proposals.Select(x => _mapper.Map<ProposalModel>(x));
+        try
+        {
+            var proposals = await _proposalRepository.GetProposalsAsync(ct);
+            return proposals.Select(x => _mapper.Map<ProposalModel>(x));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"{nameof(GetProposalsAsync)} has error");
+            throw;
+        }
     }
     /// <summary>
     /// Get Proposals from stored procedure with Dapper
@@ -31,7 +39,15 @@ public class ProposalService : IProposalService
     /// <returns></returns>
     public async Task<IEnumerable<ProposalModel>> GetProposalsFromRawAsync(CancellationToken ct = default)
     {
-        var proposals = await _proposal.GetProposalsAsync(ct);
-        return proposals;
+        try
+        {
+            var proposals = await _proposal.GetProposalsAsync(ct);
+            return proposals;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"{nameof(GetProposalsFromRawAsync)} has error");
+            throw;
+        }
     }
 }

@@ -1,11 +1,10 @@
-﻿namespace Demo.Ipt.Test.Common
+﻿namespace Demo.Ipt.Test.Common;
+public static class DataFactory
 {
-    public static class DataFactory
+    public static IEnumerable<Proposal> DefaultDatabaseProposals()
     {
-        public static IEnumerable<Proposal> DefaultDatabaseProposals()
+        return new[]
         {
-            return new[]
-            {
                 new Proposal
                 {
                     Id = 1,
@@ -78,6 +77,6 @@
                     },
                 }
             };
-        }
     }
 }
+

@@ -43,8 +43,6 @@ public class HttpGlobalExceptionFilter : IExceptionFilter
                 json.DeveloperMessage = context.Exception;
             }
 
-            // Result asigned to a result object but in destiny the response is empty. This is a known bug of .net core 1.1
-            // It will be fixed in .net core 1.1.2. See https://github.com/aspnet/Mvc/issues/5594 for more information
             context.Result = new InternalServerErrorObjectResult(json);
             context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
         }

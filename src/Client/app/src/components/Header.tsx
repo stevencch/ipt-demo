@@ -1,5 +1,5 @@
 import React from 'react';
-export const App: React.FC = () => {
+export const Header: React.FC = () => {
     return (
       <div className='ipt__header'>
           <div>Instituional Pricing Tool <span className="version">5.0.1</span></div>
@@ -7,4 +7,4 @@ export const App: React.FC = () => {
     )
   }
   
-  export default App;
+  export default Header;

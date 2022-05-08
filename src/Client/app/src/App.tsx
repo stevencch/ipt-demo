@@ -9,7 +9,6 @@ export const App: React.FC = () => {
     <BrowserRouter>
       <Header></Header>
       <div className="App">
-
         <Routes>
           <Route path="/" element={<ProposalsList />}>
           </Route>

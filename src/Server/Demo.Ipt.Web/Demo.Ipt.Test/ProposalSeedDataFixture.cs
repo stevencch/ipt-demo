@@ -10,7 +10,6 @@ public class ProposalSeedDataFixture
             .Options;
 
         IptDbContext = new IptDbContext(options);
-
         IptDbContext.Proposals.AddRange(DataFactory.DefaultDatabaseProposals());
         IptDbContext.SaveChanges();
     }

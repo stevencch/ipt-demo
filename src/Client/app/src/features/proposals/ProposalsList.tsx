@@ -10,27 +10,29 @@ export const ProposalsList: React.FC = () => {
     const proposalStatus = useAppSelector(state => state.proposals.status)
     const error = useAppSelector(state => state.proposals.error)
 
-    const onGetData=(e: React.MouseEvent<HTMLButtonElement>)=>{
+    const onGetData = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         dispatch(fetchProposals())
     }
 
     let content
-
     if (proposalStatus === 'loading') {
-        content = <Spinner text="Loading..."  />
+        content = <Spinner text="Loading..." />
     } else if (proposalStatus === 'succeeded') {
         const orderedProposals = proposals
             .slice()
             .sort((a, b) => a.proposalName.localeCompare(b.proposalName))
-        content =<MemoizedProposalDataGrid proposals={orderedProposals}/>
+        content = <MemoizedProposalDataGrid proposals={orderedProposals} />
     } else if (proposalStatus === 'failed') {
         content = <div>{error}</div>
     }
 
     return (
         <section className="proposal__container">
-            <div><button className='btn__getData' onClick={onGetData}>Get Data</button></div>
+            <div><button className='btn__getData'
+                onClick={onGetData}>
+                Get Data
+            </button></div>
             {content}
         </section>
     )

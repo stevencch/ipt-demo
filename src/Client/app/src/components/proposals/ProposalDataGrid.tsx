@@ -2,7 +2,8 @@ import React, {  useState } from "react";
 import { Proposal } from "../../types/proposals/Proposal";
 import DataGrid, { Column, RowsChangeData } from 'react-data-grid';
 import { Facility } from "../../types/proposals/Facility";
-import { FacilityDataView } from "./FacilityDataView";
+import { MemoizedFacilityDataView } from "./FacilityDataView";
+
 export type ProposalRow =
   | {
     type: 'PROPOSAL';
@@ -35,7 +36,7 @@ export const ProposalDataGrid: React.FC<{ proposals: Proposal[] }> = ({ proposal
       formatter({ row, isCellSelected, onRowChange }) {
         if (row.type === 'FACILITY') {
           return (
-            <FacilityDataView facilities={row.facilities} />
+            <MemoizedFacilityDataView facilities={row.facilities} />
           );
         }
         return (
@@ -65,7 +66,6 @@ export const ProposalDataGrid: React.FC<{ proposals: Proposal[] }> = ({ proposal
       }
     },
   ];
-
 
   const proposalRows = (selectedProposalId: number): ProposalRow[] => {
     const rows: ProposalRow[] = [];

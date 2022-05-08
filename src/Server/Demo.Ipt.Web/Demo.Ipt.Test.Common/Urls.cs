@@ -6,5 +6,4 @@ public static class Urls
     {
         public static readonly string GetData = $"{BaseUrl}/api/Proposal/getData";
     }
-
 }

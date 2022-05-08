@@ -16,7 +16,6 @@ const initialState: ProposalsState = {
     error: null
 }
 
-
 export const proposalSlice = createSlice({
     name: 'proposals',
     initialState,
@@ -29,7 +28,6 @@ export const proposalSlice = createSlice({
             })
             .addCase(fetchProposals.fulfilled, (state, action: PayloadAction<Proposal[]>) => {
                 state.status = 'succeeded'
-                // Add any fetched posts to the array
                 state.proposals = action.payload
             })
             .addCase(fetchProposals.rejected, (state, action) => {
@@ -48,7 +46,6 @@ export const selectAllProposals = (state: RootState): Proposal[] => state.propos
 
 export const selectProposalById = (state: RootState, proposalId: number) =>
     state.proposals.proposals.find(p => p.proposalId === proposalId)
-
 
 export default proposalSlice.reducer
 

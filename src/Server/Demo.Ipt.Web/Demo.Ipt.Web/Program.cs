@@ -8,9 +8,7 @@ builder.Services.AddCustomDbContext(builder.Configuration)
     .AddSupportedService()
     .AddCoreServices()
     .AddCustomCors(builder.Configuration, AppConstants.ApiCorsPolicy);
-
 builder.Host.UseSerilog();
-
 var app = builder.Build();
 
 Log.Information("Starting web host");
@@ -26,7 +24,6 @@ app.UseStaticFiles();
 app.UseRouting();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
-
 app.Run();
 
 Serilog.ILogger CreateSerilogLogger(IConfiguration configuration)

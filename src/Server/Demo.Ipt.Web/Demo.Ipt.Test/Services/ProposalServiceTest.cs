@@ -1,4 +1,6 @@
-﻿namespace Demo.Ipt.Test.Services;
+﻿using Microsoft.Extensions.Logging;
+
+namespace Demo.Ipt.Test.Services;
 public class ProposalServiceTest:IClassFixture<ProposalSeedDataFixture>
 {
     ProposalSeedDataFixture fixture;
@@ -15,7 +17,8 @@ public class ProposalServiceTest:IClassFixture<ProposalSeedDataFixture>
         var proposalRepository = new ProposalRepository(fixture.IptDbContext);
         var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfile>());
         var mapper = config.CreateMapper();
-        var proposalService = new ProposalService(proposalRepository, proposalQueryMock.Object, mapper);
+        var loggerMock = new Mock<ILogger<ProposalService>>();
+        var proposalService = new ProposalService(proposalRepository, proposalQueryMock.Object, mapper, loggerMock.Object);
         //act
         var proposals = await proposalService.GetProposalsAsync();
         //assert
@@ -32,7 +35,8 @@ public class ProposalServiceTest:IClassFixture<ProposalSeedDataFixture>
         var proposalRepository = new ProposalRepository(fixture.IptDbContext);
         var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfile>());
         var mapper = config.CreateMapper();
-        var proposalService = new ProposalService(proposalRepository, proposalQueryMock.Object, mapper);
+        var loggerMock = new Mock<ILogger<ProposalService>>();
+        var proposalService = new ProposalService(proposalRepository, proposalQueryMock.Object, mapper, loggerMock.Object);
         //act
         var proposals = await proposalService.GetProposalsAsync();
         //assert
@@ -52,7 +56,8 @@ public class ProposalServiceTest:IClassFixture<ProposalSeedDataFixture>
         var proposalResults = initProposals.Select(x => mapper.Map<ProposalModel>(x));
         proposalQueryMock.Setup(lib => lib.GetProposalsAsync(CancellationToken.None)).Returns(Task.FromResult(proposalResults));
         var proposalRepositoryMock = new Mock<IProposalRepository>();
-        var proposalService = new ProposalService(proposalRepositoryMock.Object, proposalQueryMock.Object, mapper);
+        var loggerMock = new Mock<ILogger<ProposalService>>();
+        var proposalService = new ProposalService(proposalRepositoryMock.Object, proposalQueryMock.Object, mapper, loggerMock.Object);
         //act
         var proposals = await proposalService.GetProposalsFromRawAsync();
         //assert
@@ -72,7 +77,8 @@ public class ProposalServiceTest:IClassFixture<ProposalSeedDataFixture>
         var proposalResults = initProposals.Select(x => mapper.Map<ProposalModel>(x));
         proposalQueryMock.Setup(lib => lib.GetProposalsAsync(CancellationToken.None)).Returns(Task.FromResult(proposalResults));
         var proposalRepositoryMock = new Mock<IProposalRepository>();
-        var proposalService = new ProposalService(proposalRepositoryMock.Object, proposalQueryMock.Object, mapper);
+        var loggerMock = new Mock<ILogger<ProposalService>>();
+        var proposalService = new ProposalService(proposalRepositoryMock.Object, proposalQueryMock.Object, mapper, loggerMock.Object);
         //act
         var proposals = await proposalService.GetProposalsFromRawAsync();
         //assert

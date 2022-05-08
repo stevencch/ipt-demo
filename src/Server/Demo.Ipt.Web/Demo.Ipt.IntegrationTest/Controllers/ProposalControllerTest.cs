@@ -11,7 +11,7 @@ public class ProposalController: IClassFixture<CustomWebApplicationFactory<Progr
         
     }
     [Fact]
-    public async Task ProposalControolerTest()
+    public async Task ProposalControolerTest_Success()
     {
         // Arrange
         var client = _factory.CreateClient(new WebApplicationFactoryClientOptions

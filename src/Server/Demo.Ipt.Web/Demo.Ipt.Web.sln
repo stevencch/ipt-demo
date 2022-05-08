@@ -8,6 +8,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Ipt.Test", "Demo.Ipt.Test\Demo.Ipt.Test.csproj", "{53937CB6-3C3C-46FC-8841-A6A817D1582E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Solution Notes", "01. Solution Notes", "{145FE9AC-B5B8-448C-BDD0-0B91B1939316}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Database\database_creation.sql = ..\..\Database\database_creation.sql
+		..\..\..\README.md = ..\..\..\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. App", "02. App", "{01655DA2-A4C2-4D83-B079-35ECE3FF27D6}"
 EndProject
@@ -17,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Ipt.Web.Core", "Demo.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Ipt.Web.Infrastructure", "Demo.Ipt.Web.Infrastructure\Demo.Ipt.Web.Infrastructure.csproj", "{743C091E-C338-4432-A7F8-76778E82457F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Ipt.Test.Common", "Demo.Ipt.Test.Common\Demo.Ipt.Test.Common.csproj", "{97E6505B-3AC2-4EAB-8D26-1D0DE84084A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Ipt.Test.Common", "Demo.Ipt.Test.Common\Demo.Ipt.Test.Common.csproj", "{97E6505B-3AC2-4EAB-8D26-1D0DE84084A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Ipt.IntegrationTest", "Demo.Ipt.IntegrationTest\Demo.Ipt.IntegrationTest.csproj", "{41CED9D1-FCEF-4A0E-B194-79B42313142B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Ipt.IntegrationTest", "Demo.Ipt.IntegrationTest\Demo.Ipt.IntegrationTest.csproj", "{41CED9D1-FCEF-4A0E-B194-79B42313142B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

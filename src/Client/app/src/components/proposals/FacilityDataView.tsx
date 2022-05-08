@@ -37,7 +37,7 @@ export const FacilityDataView: React.FC<{ facilities: Facility[] }> = ({ facilit
                             Facility:
                             <select value={facilityId} onChange={handleFacilityChange}>
                                 {
-                                    facilities.map((f, index) => <option key={f.facilityId} value={f.facilityId}>{f.facilityName}</option>)
+                                    facilities.map((f) => <option key={f.facilityId} value={f.facilityId}>{f.facilityName}</option>)
                                 }
                             </select>
                         </label>
@@ -68,8 +68,7 @@ export const FacilityDataView: React.FC<{ facilities: Facility[] }> = ({ facilit
                 </div>
                 : <div>No facilities found</div>}
         </>
-
-
     )
 }
 
+export const MemoizedFacilityDataView = React.memo(FacilityDataView);
