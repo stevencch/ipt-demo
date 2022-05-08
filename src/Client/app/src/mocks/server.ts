@@ -17,8 +17,8 @@ const proposals: Proposal[] = [
              facilityName:"Facility1",
              country:"Australia",
              currency:"AUD",
-             startDate:new Date(2022,5,1),
-             maturityDate:new Date(2022,5,1),
+             startDate:new Date(2022,5,10),
+             maturityDate:new Date(2022,5,10),
              limit:1000000000
           },
           {
@@ -26,9 +26,9 @@ const proposals: Proposal[] = [
             facilityName:"Facility2",
             country:"Australia",
             currency:"AUD",
-            startDate:new Date(2022,5,1),
-            maturityDate:new Date(2022,5,1),
-            limit:1000000000
+            startDate:new Date(2021,8,10),
+            maturityDate:new Date(2021,8,10),
+            limit:2000000000
          },
        ]
     },
@@ -36,7 +36,7 @@ const proposals: Proposal[] = [
         proposalId:2,
         proposalName:"proposal2",
         customerGrpName:"CustomerGrpName2",
-        date:new Date(2022,5,1),
+        date:new Date(2022,3,10),
         description:"Detailed description2",
         status:"In Preparation",
         facilities:[]

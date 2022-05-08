@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { ProposalView } from '../../components/proposals/ProposalView';
+import { MemoizedProposalDataGrid } from '../../components/proposals/ProposalDataGrid';
 import { Spinner } from '../../components/Spinner';
 import { fetchProposals, selectAllProposals } from './ProposalsSlice';
 
@@ -23,17 +23,14 @@ export const ProposalsList: React.FC = () => {
     } else if (proposalStatus === 'succeeded') {
         const orderedProposals = proposals
             .slice()
-            .sort((a, b) => b.proposalName.localeCompare(a.proposalName))
-
-        content = orderedProposals.map(proposal => (
-            <ProposalView key={proposal.proposalId} proposal={proposal} />
-        ))
+            .sort((a, b) => a.proposalName.localeCompare(b.proposalName))
+        content =<MemoizedProposalDataGrid proposals={orderedProposals}/>
     } else if (proposalStatus === 'failed') {
         content = <div>{error}</div>
     }
 
     return (
-        <section className="posts-list">
+        <section className="proposal__container">
             <h2>Proposals</h2>
             {content}
         </section>
