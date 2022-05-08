@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ProposalsList } from './features/proposals/ProposalsList';
+import './App.css';
 
-function App() {
+export const App: React.FC = () => {
   return (
     <BrowserRouter>
       <div className="App">
@@ -14,7 +13,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

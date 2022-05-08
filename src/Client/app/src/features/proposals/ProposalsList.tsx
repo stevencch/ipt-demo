@@ -23,7 +23,7 @@ export const ProposalsList: React.FC = () => {
     } else if (proposalStatus === 'succeeded') {
         const orderedProposals = proposals
             .slice()
-            .sort((a, b) => b.proposalName .localeCompare(a.proposalName))
+            .sort((a, b) => b.proposalName.localeCompare(a.proposalName))
 
         content = orderedProposals.map(proposal => (
             <ProposalView key={proposal.proposalId} proposal={proposal} />
