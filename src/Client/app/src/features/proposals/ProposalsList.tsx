@@ -10,11 +10,10 @@ export const ProposalsList: React.FC = () => {
     const proposalStatus = useAppSelector(state => state.proposals.status)
     const error = useAppSelector(state => state.proposals.error)
 
-    useEffect(() => {
-        if (proposalStatus === 'idle') {
-            dispatch(fetchProposals())
-        }
-    }, [proposalStatus,dispatch])
+    const onGetData=(e: React.MouseEvent<HTMLButtonElement>)=>{
+        e.preventDefault();
+        dispatch(fetchProposals())
+    }
 
     let content
 
@@ -31,7 +30,7 @@ export const ProposalsList: React.FC = () => {
 
     return (
         <section className="proposal__container">
-            <h2>Proposals</h2>
+            <div><button className='btn__getData' onClick={onGetData}>Get Data</button></div>
             {content}
         </section>
     )

@@ -42,7 +42,7 @@ export const FacilityDataView: React.FC<{ facilities: Facility[] }> = ({ facilit
                             </select>
                         </label>
                     </div>
-                    <div className="facility__container" style={getRowHeightStyle(100)} >
+                    <div className="facility__container">
                         <div>
                             <div className="facility__field__title" style={getRowHeightStyle(30)}>Booking Country</div>
                             <div className="facility__field__content" style={getRowHeightStyle(40)}>{facility.country}</div>

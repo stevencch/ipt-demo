@@ -68,8 +68,18 @@
 }
 
 .proposal__container {
+    .btn__getData{
+        padding:10px 20px;
+        background-color: #007ABC;
+        color:#ffffff;
+        border-radius: 5px;
+        margin:5px;
+    }
     .rdg-header-row {
         background-color: #dfe7ea;
+    }
+    .fill-grid{
+        block-size: 900px;
     }
     .view__summary {
         cursor: pointer;

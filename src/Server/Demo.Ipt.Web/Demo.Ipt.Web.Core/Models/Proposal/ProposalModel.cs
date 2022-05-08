@@ -11,5 +11,5 @@ public class ProposalModel
     public DateTime Date { get; set; }
     public string Description { get; set; }
     public string Status { get; set; }
-    public ICollection<FacilityModel> Facilities { get; set; }
+    public List<FacilityModel> Facilities { get; set; }
 }

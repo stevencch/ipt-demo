@@ -26,4 +26,23 @@ public static class ConfigureCoreServices
         services.AddScoped<IProposalService, ProposalService>();
         return services;
     }
+
+    public static IServiceCollection AddCustomCors(this IServiceCollection services
+        , IConfiguration configuration, string corsPlicy)
+    {
+        var allowedCorsOrigins = configuration.GetSection("AllowedCorsOrigins").Get<string[]>();
+        services.AddCors(options =>
+        {
+            options.AddPolicy(name: corsPlicy,
+                              builder =>
+                              {
+                                  builder.WithOrigins(allowedCorsOrigins)
+                                   .AllowAnyMethod()
+                                   .AllowAnyHeader()
+                                   .AllowCredentials();
+                              });
+
+        });
+        return services;
+    }
 }

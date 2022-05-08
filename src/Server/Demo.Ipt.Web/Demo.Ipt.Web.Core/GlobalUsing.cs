@@ -1,4 +1,5 @@
 ﻿global using AutoMapper;
+global using Microsoft.Extensions.Logging;
 //Core
 global using Demo.Ipt.Web.Core.Interfaces;
 global using Ardalis.Specification;
