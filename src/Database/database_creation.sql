@@ -129,17 +129,17 @@ GO
 INSERT [dbo].[Proposals] ([Id], [ProposalName], [CustomerGrpName], [Date], [Description], [StatusId], [DateCreated], [DateModified]) VALUES (3, N'proposal2
 ', N'customerGrpName2
 ', CAST(N'2017-01-13T00:00:00.0000000' AS DateTime2), N'Detailed description2
-', 1, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
+', 4, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
 GO
 INSERT [dbo].[Proposals] ([Id], [ProposalName], [CustomerGrpName], [Date], [Description], [StatusId], [DateCreated], [DateModified]) VALUES (4, N'proposal3
 ', N'customerGrpName3
 ', CAST(N'2020-05-01T00:00:00.0000000' AS DateTime2), N'Detailed description3
-', 1, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
+', 3, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
 GO
 INSERT [dbo].[Proposals] ([Id], [ProposalName], [CustomerGrpName], [Date], [Description], [StatusId], [DateCreated], [DateModified]) VALUES (5, N'proposal4
 ', N'customerGrpName4
 ', CAST(N'2014-06-17T00:00:00.0000000' AS DateTime2), N'Detailed description4
-', 1, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
+', 2, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
 GO
 INSERT [dbo].[Proposals] ([Id], [ProposalName], [CustomerGrpName], [Date], [Description], [StatusId], [DateCreated], [DateModified]) VALUES (6, N'proposal5
 ', N'customerGrpName5
@@ -149,12 +149,12 @@ GO
 INSERT [dbo].[Proposals] ([Id], [ProposalName], [CustomerGrpName], [Date], [Description], [StatusId], [DateCreated], [DateModified]) VALUES (7, N'proposal6
 ', N'customerGrpName6
 ', CAST(N'2017-08-02T00:00:00.0000000' AS DateTime2), N'Detailed description6
-', 1, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
+', 3, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
 GO
 INSERT [dbo].[Proposals] ([Id], [ProposalName], [CustomerGrpName], [Date], [Description], [StatusId], [DateCreated], [DateModified]) VALUES (8, N'proposal7
 ', N'customerGrpName7
 ', CAST(N'2012-08-20T00:00:00.0000000' AS DateTime2), N'Detailed description7
-', 1, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
+', 2, CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2), CAST(N'2022-05-07T00:00:00.0000000' AS DateTime2))
 GO
 INSERT [dbo].[Proposals] ([Id], [ProposalName], [CustomerGrpName], [Date], [Description], [StatusId], [DateCreated], [DateModified]) VALUES (9, N'proposal8
 ', N'customerGrpName8
